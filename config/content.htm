@@ -1,17 +1,21 @@
-<h1>簡介</h1>
+<h1>期中報告</h1>
+<h2>簡介</h2>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="/images/gocycle4.png" width="587"/></p><h1>目錄結構</h1>
+<p><img alt="" height="471" src="/images/gocycle4.png" width="587"/></p>
+<h2>目錄結構</h2>
 <p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
 <p>content.htm 檔案可以透過動態系統中的 generate_pages 功能, 將超文件轉為位於 content 目錄中的個別頁面檔案.</p>
 <p>動態系統與靜態系統則共用 downloads, images, static 等目錄, 其中 downloads 目錄存放在動態系統上傳的文件檔, 而 images 目錄則存放動態系統所上傳的影像檔案, 包括 jpg, png 與 gif 等格式圖檔.</p>
-<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p><h1>頁面編輯</h1>
+<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p>
+<h2>頁面編輯</h2>
 <p>CMSimfly 動態系統的網際編輯器採用 <a href="https://www.tiny.cloud/">TinyMCE4</a>, 可以放入一般超文件,  納入圖檔, 嵌入影片連結, 並且加入帶有行數的原始碼.</p>
 <p>透過 File Upload 功能, 可以一次上傳多個檔案,  存入 downloads 目錄中儲存, 之後各頁面可以引入對應連結.</p>
 <p>而圖檔的上傳與引用與一般檔案類似, 但上傳後存入 images 目錄中.</p>
 <h2>插入程式碼</h2>
 <p>CMSimfly 目前使用 Syntaxhighlighter 3.0.83:</p>
 <p> <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a> </p>
-<p>進行頁面中的程式碼高亮顯示.</p><h3>Java 程式碼</h3>
+<p>進行頁面中的程式碼高亮顯示.</p>
+<h3>Java 程式碼</h3>
 <pre class="brush:java;auto-links:false;toolbar:false" contenteditable="false">import java.util.Scanner;
 
 public class Life {
@@ -91,7 +95,8 @@ public class Life {
     }
 
 }</pre>
-<p></p><h3>Python 程式碼</h3>
+<p></p>
+<h3>Python 程式碼</h3>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def parse_content():
     """use bs4 and re module functions to parse content.htm"""
     #from pybean import Store, SQLiteWriter
@@ -173,7 +178,8 @@ public class Life {
     return head_list, level_list, page_list
 
 </pre>
-<p></p><h3>C或C++程式碼</h3>
+<p></p>
+<h3>C或C++程式碼</h3>
 <p>請注意, 目前 CMSimfly 標題內文無法解讀 "/" 符號, 因此若本頁面的標題為  "C/C++程式碼", 則無法進行分頁.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* Runge Kutta for a set of first order differential equations */
  
@@ -269,7 +275,8 @@ double f(double x, double y[], int i){
     x=-y[0]-0.5*y[1];
   return x;
 }</pre>
-<p></p><h3>Lua 程式碼</h3>
+<p></p>
+<h3>Lua 程式碼</h3>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- 導入 js 模組
 js = require("js")
 -- 取得 window
@@ -297,7 +304,8 @@ while answer ~= tonumber(guess) do
 end
 print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
     </pre>
-<p></p><h3>Javascript 程式碼</h3>
+<p></p>
+<h3>Javascript 程式碼</h3>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">STLViewer = function(stlpath, plotarea) {
 
 	var mycanvas = document.getElementById(plotarea);
@@ -382,7 +390,8 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
 	}
 }
 </pre>
-<p></p><h3>Html 原始碼</h3>
+<p></p>
+<h3>Html 原始碼</h3>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
    &lt;head&gt;
       &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
@@ -426,17 +435,208 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
    &lt;/body&gt;
 &lt;/html&gt;
 COPY TO CLIPBOARD	</pre>
-<p></p><h1>網際簡報</h1>
+<p></p>
+<h2>網際簡報</h2>
 <p>CMSimfly 中採用 <a href="https://revealjs.com/#/">Reveal.js</a> 作為網際簡報, 其中的維護檔案位於 config/reveal.js, 而對應的簡報檔案則位於 reveal 目錄中.</p>
-<h1>網誌編輯</h1>
+<h2>網誌編輯</h2>
 <p>CMSimfly 彩用 <a href="https://blog.getpelican.com/">Pelican blog</a> 系統, 編輯檔案位於 config/pelican.leo, 對應的</p>
 <p> Markdown 原始檔案位於 markdown 目錄中, 而經 Pelican 轉換出的網誌超文件檔案則位於 blog 目錄中.</p>
 <p>其餘在網誌文章中所需要的 Javascript 或 Brython 程式檔案, 則與 CMSimfly 及 Reveal.js 共用, 位於 static 目錄下.</p>
 <p>上傳檔案與圖檔的引用則與 CMSimfly 架構相同.</p>
-<h1>已知錯誤</h1>
+<h2>已知錯誤</h2>
 <h4>全部頁面會因無法正確解讀而誤刪</h4>
 <p>在特定情況下, 系統會誤刪 config/content.htm 檔案, 目前在單頁或全部頁面編輯存檔之前, 或將上一版本的 content.htm 存入 content_back.htm, 若 content.htm 內容被程式誤刪, 可以利用備份檔案複製回原始內容後, 再進行後續處理.</p>
 <h4>頁面標題不支援特殊符號</h4>
 <p>各頁面標題目前不支援特殊符號, 例如: "/", "?" 等, 若已經發生程式無法解讀頁面的情況, 只能從編輯 config/content.htm 下手, 若系統位於遠端, 則後續必須要再設法提供一個額外的編輯 config/content.htm 檔案的網際連結功能.</p>
 <h4>Video 引用不支援內部引用</h4>
 <p>tinymce 中插入 video 的小視窗, 要移除引用的圖像與連結, 因為一般建議不要在內容中存入 .mp4 的影片資料, 而只接受引入影片 URL 連結.</p>
+<pre class="brush:java;auto-links:false;toolbar:false" contenteditable="false">&lt;p&gt;&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;&lt;/p&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;// &lt;![CDATA[
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.floor(Math.random()*10);
+}
+// ]]&gt;&lt;/script&gt;</pre>
+<p></p>
+<h4>proxy設定問題</h4>
+<p>clone倉儲時收到Received HTTP code 403 from proxy after CONNECT的錯誤指示，則須進入.gitconfig將原有的proxy位置以#註解掉</p>
+<h2>GAME1</h2>
+<p><button onclick="myFunction()">Try it</button></p>
+<p></p>
+<p id="demo"></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">
+<script>// <![CDATA[
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.floor(Math.random()*10);
+}
+// ]]></script>
+</pre>
+<p><canvas height="300" id="canvas" width="400"> Your browser doesn't support the HTML5 element canvas. </canvas> <br/> <button onclick="throwdice();">Throw dice </button></p>
+<form id="f" name="f">Stage: <input name="stage" type="text" value="First Throw"/> Point: <input name="pv" type="text" value="   "/> Outcome: <input name="outcome" type="text" value="     "/></form>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">
+<script type="text/javascript">// <![CDATA[
+var cwidth = 400;
+    var cheight = 300;
+    var dicex = 50;
+    var dicey = 50;
+    var dicewidth = 100;
+    var diceheight = 100;
+    var dotrad = 6;
+    var ctx;
+    var dx;
+    var dy;
+    var firstturn = true;
+    var point;
+function throwdice() {
+    var sum;
+    var ch = 1+Math.floor(Math.random()*6);
+    sum = ch;
+    dx = dicex;
+    dy = dicey;
+    drawface(ch);
+    dx = dicex + 150;
+    ch=1 + Math.floor(Math.random()*6);
+    sum += ch;
+    drawface(ch);
+    if (firstturn) {
+        switch(sum) {
+            case 7:
+            case 11:
+              document.f.outcome.value="You win!";
+              break;
+            case 2:
+            case 3:
+            case 12:
+              document.f.outcome.value="You lose!";
+              break;
+            default:
+              point = sum;
+              document.f.pv.value=point;
+              firstturn = false;
+              document.f.stage.value="Need follow-up throw.";
+              document.f.outcome.value="   ";
+        }
+    }
+    else {
+        switch(sum) {
+        case point:
+           document.f.outcome.value="You win!";
+           document.f.stage.value="Back to first throw.";
+           document.f.pv.value=" ";
+           firstturn = true;
+           break;
+        case 7:
+           document.f.outcome.value="You lose!";
+           document.f.stage.value="Back to first throw.";
+           document.f.pv.value=" ";
+           firstturn = true;
+        }
+            }
+}
+function drawface(n) {
+  ctx = document.getElementById('canvas').getContext('2d');  
+  ctx.lineWidth = 5;
+  ctx.clearRect(dx,dy,dicewidth,diceheight);
+  ctx.strokeRect(dx,dy,dicewidth,diceheight)
+  var dotx;
+  var doty;
+  ctx.fillStyle = "#009966";
+    switch(n) {
+        case 1:
+         draw1();
+         break;
+        case 2:
+         draw2();
+         break;
+        case 3:
+         draw2();
+         draw1();
+         break;
+        case 4:
+         draw4();
+         break;
+        case 5:
+         draw4();
+         draw1();
+         break;
+        case 6:
+         draw4();
+         draw2mid();
+         break;
+         
+    }
+}
+function draw1() {
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + .5*dicewidth;
+    doty = dy + .5*diceheight;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+}
+function draw2() {
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx+dicewidth-3*dotrad;
+    doty = dy+diceheight-3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+}
+function draw4() {
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx+dicewidth-3*dotrad;
+    doty = dy+diceheight-3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + diceheight-3*dotrad;  //no change
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx+dicewidth-3*dotrad;
+    doty = dy+ 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill(); 
+}
+function draw2mid() {
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + .5*diceheight;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx+dicewidth-3*dotrad;
+    doty = dy + .5*diceheight; //no change
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+}
+// ]]></script>
+</pre>
+<h2>期中報告</h2>
+<p></p>
+<h4>40723137</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kApNUO025Cg" width="560"></iframe></p>
+<h4>40723119</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/sT-M4kFX1AI" width="560"></iframe></p>
+<h4>40723112</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1scHf3rw1pQ" width="560"></iframe></p>
+<h4>40723120</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Xv5AxVbXVLo" width="560"></iframe></p>
+<h4>40723151</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yeAcku7uAx8" width="560"></iframe></p>
+<h4>40723110</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DTZS_2E6sbA" width="560"></iframe></p>

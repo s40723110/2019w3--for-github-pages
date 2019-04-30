@@ -1,4 +1,5 @@
 # cmsimfly
 CMSimfly is a simple CMS in Flask
-
-https://s40723110.github.io/2019w3--for-github-pages/content/index.html
+https://mdewcm2019.github.io/wcm2019-task-g3/content/index.html
+https://chiamingyen.github.io/cmsimfly
+ 
